@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --main-bg: #0e0f1a;
+  --card-bg: rgba(30, 30, 40, 0.85);
+  --accent: #00ffd0;
+  --accent2: #ff0099;
+  --text-glow: 0 0 10px #00ffd0, 0 0 20px #00ffd0;
+  --btn-bg: rgba(20, 20, 30, 0.85);
+  --border-radius: 22px;
+  --noise-opacity: 0.08;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at top, #22263a 0%, #0e0f1a 100%);
+  min-height: 100vh;
+  font-family: 'Montserrat', 'JetBrains Mono', monospace;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.noise {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: var(--noise-opacity);
+  mix-blend-mode: overlay;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 10px 0 10px;
+  z-index: 2;
+  position: relative;
+  animation: fadeInDown 1s cubic-bezier(.46,1.48,.57,1.13);
+}
+
+.animated-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 10px;
+}
+
+.animated-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 32px 4px #00ffd0cc, 0 0 0 8px #22263a55;
+  animation: pulse 2.5s infinite alternate;
+}
+
+.glitch {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  text-shadow: 0 0 16px #00ffd0, 0 0 4px #ff0099;
+  animation: glitchAnim 2s infinite linear alternate-reverse;
+}
+.glitch:before, .glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0; width: 100%;
+  opacity: 0.6;
+}
+.glitch:before {
+  text-shadow: 2px 0 #ff0099;
+  animation: glitchTop 1.2s infinite linear alternate-reverse;
+  top: -2px;
+}
+.glitch:after {
+  text-shadow: -2px 0 #00ffd0;
+  animation: glitchBottom 1s infinite linear alternate-reverse;
+  top: 2px;
+}
+
+.animated-nav {
+  margin-top: 14px;
+  display: flex;
+  gap: 32px;
+}
+.animated-nav a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  color: #00ffd0;
+  text-decoration: none;
+  padding: 4px 16px;
+  border-radius: 7px;
+  transition: background 0.25s, color 0.15s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.animated-nav a:hover {
+  background: linear-gradient(90deg, #00ffd0 60%, #ff0099 100%);
+  color: #22263a;
+  box-shadow: 0 0 0 2px #00ffd0aa;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 40px 0 20px 0;
+  z-index: 2;
+}
+
+.glass-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 40px 10px #00ffd014, 0 1.5px 10px 0 #ff009911;
+  padding: 36px 32px;
+  max-width: 420px;
+  width: 95vw;
+  margin: 0 auto;
+  backdrop-filter: blur(9px);
+  border: 1.5px solid #00ffd044;
+  position: relative;
+}
+
+.glow {
+  color: var(--accent);
+  text-shadow: var(--text-glow);
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid #00ffd0;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 15px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 13px 25px;
+  border-radius: 13px;
+  background: var(--btn-bg);
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: 'JetBrains Mono', monospace;
+  border: none;
+  box-shadow: 0 2px 16px 0 #00ffd044, 0 1px 2px 0 #ff009944;
+  margin: 0;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+.btn i {
+  margin-right: 13px;
+  font-size: 1.4em;
+}
+.btn:hover {
+  background: linear-gradient(90deg, #00ffd0 60%, #ff0099 100%);
+  color: #22263a;
+  transform: scale(1.07) translateY(-4px) rotate(-1deg);
+  box-shadow: 0 4px 24px 2px #00ffd0aa;
+}
+
+.btn.whatsapp { border-left: 6px solid #25D366; }
+.btn.telegram { border-left: 6px solid #229ED9; }
+.btn.facebook { border-left: 6px solid #1877F3; }
+.btn.youtube { border-left: 6px solid #FF0000; }
+.btn.instagram { border-left: 6px solid #F56040; }
+.btn.github { border-left: 6px solid #fff; }
+
+.animated-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.animated-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-in-left { transform: translateX(-60px); }
+.fade-in-right { transform: translateX(60px); }
+.fade-in-up { transform: translateY(60px); }
+
+.footer {
+  text-align: center;
+  padding: 18px 0;
+  font-size: 1rem;
+  color: #aaa;
+  background: linear-gradient(90deg, #171924 40%, #23263b 100%);
+  margin-top: 30px;
+  border-top: 1px solid #22263a;
+  letter-spacing: 1.2px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-60px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+@keyframes pulse {
+  to { box-shadow: 0 0 32px 10px #ff009933, 0 0 0 14px #22263a55; }
+}
+@keyframes glitchAnim {
+  0% { transform: none; }
+  20% { transform: skew(-2deg, 0.5deg) scale(1.01);}
+  40% { transform: translateX(2px) skew(1deg, -1deg);}
+  60% { transform: translateX(-1px) skew(1.5deg, 1deg);}
+  80% { transform: skew(-1deg, 1deg);}
+  100% { transform: none;}
+}
+@keyframes glitchTop {
+  0% { left: 0px; }
+  20% { left: 2px; }
+  40% { left: -2px; }
+  60% { left: 1px; }
+  80% { left: -1px; }
+  100% { left: 0px; }
+}
+@keyframes glitchBottom {
+  0% { left: 0px; }
+  20% { left: -2px; }
+  40% { left: 2px; }
+  60% { left: -1px; }
+  80% { left: 1px; }
+  100% { left: 0px; }
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00ffd0; }
+}
+
+@media (max-width: 600px) {
+  .glass-card { padding: 22px 7vw; }
+  .header { padding: 22px 4vw 0 4vw; }
+  .animated-logo { width: 68px; height: 68px; }
+  .glitch { font-size: 2rem; }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #181928;
+}
+::-webkit-scrollbar-thumb {
+  background: #00ffd033;
+  border-radius: 8px;
+}
+
+/* You can use FontAwesome, Remixicon, or SVGs for social icons */
+.icon-whatsapp { background: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg') no-repeat center/contain; width: 1.6em; height: 1.6em; display: inline-block;}
+.icon-telegram { background: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg') no-repeat center/contain; width: 1.6em; height: 1.6em; display: inline-block;}
+.icon-facebook { background: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg') no-repeat center/contain; width: 1.6em; height: 1.6em; display: inline-block;}
+.icon-youtube { background: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg') no-repeat center/contain; width: 1.6em; height: 1.6em; display: inline-block;}
+.icon-instagram { background: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg') no-repeat center/contain; width: 1.6em; height: 1.6em; display: inline-block;}
+.icon-github { background: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg') no-repeat center/contain; width: 1.6em; height: 1.6em; display: inline-block;}
