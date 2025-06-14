@@ -1,32 +1,69 @@
-# CKHACKS - Fully Animated & Professional Website
+# 🌐 CK Hacks - About Page
 
-This project is a **modern, professional, and fully animated website** for CKHACKS, designed to attract coders and hackers worldwide. It features:
+Welcome to the official **CK Hacks About Page**!  
+This website introduces the identity of **CK Hacks**, a vibrant digital brand focused on technology, coding, hacking, and innovation.
 
-- **Glitch and glassmorphism effects**
-- **Animated logo**
-- **Animated navigation**
-- **Typewriter and fade-in text**
-- **Animated social/community buttons**
-- **Noise/texture overlay for a cyber/hacker vibe**
-- **Responsive design**
-
-## How to use
-
-1. Place your logo image as `ckhacks-logo.png` in the root directory.
-2. Edit the social links in `index.html` for your real WhatsApp, Telegram, etc.
-3. Optionally, customize colors or animations in `style.css`.
-4. Open `index.html` in your browser.
-
-## Libraries Used
-
-- [anime.js](https://animejs.com/) (optional for extra animation)
-- Google Fonts: JetBrains Mono, Montserrat
-
-## Social Icons
-
-Social icons use SVG backgrounds from [Simple Icons CDN](https://simpleicons.org/).
+🔗 Live Website: [ck-hacks.github.io/about](https://ck-hacks.github.io/about/)
 
 ---
 
-> **Note:**  
-> The design is inspired by the hacking/coding culture: dark backgrounds, neon/glitch/glassmorphism, and smooth animations for a modern, attractive look.
+## 🔥 Key Features
+
+- 🎯 **Bold Personal Branding** – Clean UI with the signature **CKHACKS** logo.
+- 🌈 **Colorful & Interactive Design** – Styled for clarity, animation, and modern appeal.
+- 🔗 **Social Media Integration** –  
+  Direct links to:
+  - WhatsApp Group
+  - Instagram
+  - Telegram
+  - Facebook
+  - YouTube
+  - GitHub
+
+- ⚡ **Animated Interface** – Smooth transitions and attractive effects.
+- 📱 **Responsive Layout** – Works perfectly on both mobile and desktop screens.
+
+---
+
+## 🚀 Purpose
+
+The **About Page** serves as a central identity hub for the CK Hacks community – connecting like-minded coders, learners, gamers, and ethical hackers.
+
+> “We’re not just a brand, we’re a movement.”  
+> — CK Hacks Team 💻
+
+---
+
+## 🤝 Connect with CK Hacks
+
+Join our community and explore the tech world together:
+
+📞 [WhatsApp](https://wa.me/917488754063)  
+📸 [Instagram](https://www.instagram.com/)  
+📢 [Telegram](https://t.me/)  
+📺 [YouTube](https://www.youtube.com/)  
+💬 [Facebook](https://facebook.com/)  
+👨‍💻 [GitHub](https://github.com/ck-hacks)
+
+---
+
+## 🛠️ Tech Stack
+
+- HTML5  
+- CSS3  
+- JavaScript  
+- Open Source Icons  
+- GitHub Pages for hosting
+
+---
+
+## 📌 License
+
+This project is open-source and free to use under the **MIT License**.
+
+---
+
+## 🙌 Credits
+
+Developed and maintained by **CK Hacks**  
+Inspired by passion. Driven by community. ❤️
